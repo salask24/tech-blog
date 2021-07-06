@@ -62,7 +62,7 @@ router.get('/post/:id', (req, res) => {
                     attributes: ['username']
                 }
             },
-            //seperated comment users (top) vs post user (bottom)
+            //separated comment users (top) vs post user (bottom)
             {
                 model: User,
                 attributes: ['username']
