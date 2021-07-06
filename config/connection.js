@@ -20,6 +20,7 @@ if (process.env.JAWSDB_URL) {
     });
 }
 //running it locally in dev 
+//localhost
 
 
 module.exports = sequelize;
