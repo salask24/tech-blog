@@ -8,13 +8,16 @@
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    background-color: #d496d17c;
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: #ffffff;
     font-weight: bold;
     transition: color .1s;
+    font-size: larger;
+    text-align: center;
   }
   
   a:hover {
@@ -33,7 +36,7 @@
   }
   
   button:hover {
-    background-color: #6a1a99;
+    background-color: #3486eb;
   }
   
   .post-list {
@@ -76,21 +79,39 @@
   
   header {
     border-bottom: 1px solid #ccc;
+    background-color: #6a1a997c;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 1%;
+    padding:  10px;
   }
   
   header h1 {
     font-size: 1em;
+    /* display: flex; */
   }
   
+
+  .card-title {
+    text-align: center;
+    font-size: 55px;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
   main {
     flex: 1;
-    padding: 2% 4%;
+    padding: 0 4px;
   }
   
+  .row {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+
+  }
+
   .btn-no-style {
     background: none;
     border: none;
@@ -110,14 +131,14 @@
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: #912d5b;
   }
   
   .delete-post-btn:hover {
     background-color: #ff643d;
   }
   
-  .post {
+  .posts {
     margin-bottom: 2%;
     line-height: 150%;
   }
