@@ -1,5 +1,22 @@
+<article class="card mb-3">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="post-title"><a href="/post/{{id}}">{{title}}</a></h3>
+            </div>
+        </div>
+    </div>
 
-{{title}}
-{{content}}
-{{user.username}}
-{{created_at}}
+    <div class="card-body pt-0">
+        <p class="card-text">{{post.content}}</p>
+{{!-- need to figure out why content is not showing on home and dash --}}
+        <p class="text-end text-muted post-byline">
+            Posted by <a href="/user/{{user.id}}" title="see all posts by {{user.username}}">{{user.username}}</a> on
+            {{format_date created_at}}
+        </p>
+        {{#each comments as |comment|}}
+        {{> comments comment}}
+        {{/each}}
+    </div>
+</article>
+

@@ -1,4 +1,4 @@
-<div class="posts">
+{{!-- <div class="posts">
     {{#unless posts }}
     <p class="center-align">No posts to display!</p>
     {{/unless}}
@@ -7,7 +7,8 @@
         {{> post-info}}
         {{/each}}
     </div>
-</div>
+</div> --}}
+
 <div class="user">
     {{#if username}}
     <h2 class="mb-3">{{username}}'s Posts</h2>
@@ -17,11 +18,10 @@
     {{>post-info}}
     {{/each}}
     {{else}}
-    {{#if username}}
-    <p class="p-1 text-muted"><em>{{username}} hasn't written any posts.</em></p>
-    {{else}}
-    <p class="p-1 text-muted"><em>No posts.</em></p>
+        {{#if username}}
+        <p class="p-1 text-muted"><em>{{username}} hasn't written any posts.</em></p>
+        {{else}}
+        <p class="p-1 text-muted"><em>No posts.</em></p>
+        {{/if}}
     {{/if}}
-    {{/if}}
-
 </div>

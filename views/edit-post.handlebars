@@ -30,7 +30,9 @@
     </div>
 </form>
 
-{{> comments post.comments}}
+{{#each post.comments as |comment|}}
+{{> comments comment}}
+{{/each}}
 
 <script src="/js/edit-post.js"></script>
 <script src="/js/delete-post.js"></script>

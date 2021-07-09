@@ -14,17 +14,27 @@
     <div class="wrapper">
         <main class="container-fluid px-0">
             <header class="row gx-0">
-                <h1 class="card-title site-title">
-                    <a href="/">Tech Blog</a>
-                </h1>
-                <nav>
-                    {{#if loggedIn}}
-                    <a href="/dashboard">Dashboard</a>
-                    <button id="logout" class="btn-no-style"><a>Logout</a></button>
-                    {{else}}
-                    <a href="/login">login</a>
-                    {{/if}}
-                </nav>
+                <div class="col">
+                    <ul class="nav flex-row-reverse">
+                        <li class="nav-item">
+                            {{#if loggedIn}}
+                            <button id="logout" class="btn btn-link nav-link">Sign Out</button>
+                            {{else}}
+                            <a class="nav-link" href="/login{{#if nextUrl}}?_next={{nextUrl}}{{/if}}">Log In</a>
+                            {{/if}}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                    </ul>
+                    <div class="d-inline-block">
+                        <h1 class="title">Tech Blog</h1>
+                        <p class="subtitle">Happy Coding❤️</p>
+                    </div>
+                </div>
             </header>
             <content class="row gx-0">
                 <div class="col-12">
@@ -32,14 +42,16 @@
                 </div>
             </content>
         </main>
-        <footer>
+        
+    </div>
+    <footer class="footer">
             I hope you enjoyed the tech chisme!👩🏻‍💻❤️
         </footer>
-    </div>
-
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>
 
 </html>
+
+

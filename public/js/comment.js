@@ -12,9 +12,9 @@ async function commentFormHandler(event) {
         //.length -1 will always grab your last index of your array
         //  ex. if 4 items in an array the index always starts at 0 and it will get the 3rd
     ];
-
+console.log(comment_text, post_id)
     if (comment_text) {
-        const response = await fetch('/api/comments', {
+        const response = await fetch('/api/comment', {
             method: 'POST',
             body: JSON.stringify({
                 post_id,

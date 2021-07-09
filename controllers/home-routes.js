@@ -55,7 +55,7 @@ router.get('/post/:id', (req, res) => {
         ],
         include: [
             {
-                model: Comments,
+                model: Comment,
                 attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
@@ -76,6 +76,8 @@ router.get('/post/:id', (req, res) => {
             }
 
             const post = dbPostData.get({ plain: true });
+            console.log(post)
+
             //always console.log after this to see what it'll look like
             //stripping out the extra info the db created and just hands the values from the columns 
             // just so handlebars can accept it more readily 
