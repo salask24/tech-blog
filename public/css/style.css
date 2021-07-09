@@ -7,6 +7,8 @@ body {
 
 h2 {
   margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   color: black
 }
 
@@ -149,6 +151,10 @@ margin-right: 30px;
 
 }
 
+.edit-link {
+margin-left: 650px;  
+font-size: 20px;
+}
 
 .card{
   margin-right: 30px;
@@ -196,6 +202,16 @@ padding-bottom: 50px;
 }
 
 
+.meta {
+  margin-left: 30px;
+  margin-top: 15px;
+
+}
+
+.text {
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
 
 /* END OF EDIT POST */
 
