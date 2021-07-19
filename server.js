@@ -41,4 +41,4 @@ sequelize.sync({ force: false }).then(() => {
     //having force:false = will not empty database
     //force:true = will dump all data and start fresh = the reset button
   app.listen(PORT, () => console.log('Now listening'));
-});
+}); 
