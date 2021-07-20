@@ -9,7 +9,7 @@
 
     <div class="card-body pt-0">
         <p class="card-text">{{content}}</p>
-{{!-- need to figure out why content is not showing on home and dash --}}
+        {{!-- need to figure out why content is not showing on home and dash --}}
         <p class="text-end text-muted post-byline">
             Posted by <a href="/user/{{user.id}}" title="see all posts by {{user.username}}">{{user.username}}</a> on
             {{format_date created_at}}
@@ -19,4 +19,3 @@
         {{/each}}
     </div>
 </article>
-
